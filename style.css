@@ -62,5 +62,10 @@
 #minute,
 #second {
     transform-origin: 300px 300px;
+    /***********************************
+    remove transition to stop arm rotating back to zero
+    if wanting to keep logic setting the current time
+    each second inside the movetheClock function see README
+    *************************************/
     transition: transform .5s ease-in-out;
 }
