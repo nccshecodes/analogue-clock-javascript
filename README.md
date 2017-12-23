@@ -45,3 +45,9 @@ By commenting out line 70 we stop the rotation happening as the hand is instantl
 transition: transform .5s ease-in-out;
 ```
 The minute and hour hands are still also moving incrementally so the jump to the next hour / minute is visually negligible.
+
+
+
+### Changing script logic
+
+1. Start by removing everything that sets the current position of the arms outside of the function. This in effect breaks the animation at this point because the incremental movement is now not happening within the runTheClock function.
