@@ -35,6 +35,13 @@ let hrPosition = (hr*30)+(min*(30/60))
 
 The CSS transform **rotate** is used to then position the arms rotating from the centre of the clockface. However, using css animation causes a weird effect to take place. At the 59th second / 59th minute / 11th hour, the respective hands rotate anticlockwise back to zero. There are two options to fix this which is where script logic plays an important part in any design/UX decision:-
 
+
 ### Remove the CSS transition **transform**
 
 The css stylesheet specifies a transform transition to make the movement smooth.
+
+By commenting out line 70 we stop the rotation happening as the hand is instantly moved to its new position.
+```
+transition: transform .5s ease-in-out;
+```
+The minute and hour hands are still also moving incrementally so the jump to the next hour / minute is visually negligible.
