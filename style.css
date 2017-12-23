@@ -67,5 +67,5 @@
     if wanting to keep logic setting the current time
     each second inside the movetheClock function see README
     *************************************/
-    /*transition: transform .5s ease-in-out;*/
+    transition: transform .5s ease-in-out;
 }
